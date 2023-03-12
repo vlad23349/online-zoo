@@ -1,0 +1,22 @@
+.button {
+  @extend %font-main;
+  @include font($size: 1.6rem, $height: 2.24rem);
+  display: inline-block;
+  width: 298px;
+  height: 54px;
+  cursor: pointer;
+  background-color: $color-orange;
+  border: none;
+  border-radius: 25px;
+  color: $color-white;
+  transition: $main-transition;
+  &_square {
+    border-radius: 3px;
+  }
+  &:hover {
+    background-color: $color-button_hover;
+  }
+  &:active {
+    background-color: $color-green;
+  }
+}

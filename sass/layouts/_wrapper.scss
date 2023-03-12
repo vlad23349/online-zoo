@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: 1220px;
+  margin: auto;
+  padding: 0 30px;
+  @include breakpoint(tablet) {
+    padding: 0 20px;
+  }
+  @include breakpoint(mobile-big) {
+    padding: 0 11px;
+  }
+}

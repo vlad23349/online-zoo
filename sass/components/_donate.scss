@@ -1,0 +1,483 @@
+.donate {
+  background: $color-background;
+  opacity: 0.9;
+
+  &__wrapper {
+    padding: 40px 30px 180px;
+
+    @include breakpoint(laptop) {
+      padding: 40px 30px 30px;
+    }
+    @include breakpoint(tablet) {
+      padding: 30px 20px 46px;
+    }
+    @include breakpoint(mobile-big) {
+      padding: 30px 10px 23px;
+    }
+  }
+
+  &__container {
+    padding: 40px 92px 62px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    @include breakpoint(laptop) {
+      padding: 20px 48px 46px;
+    }
+    @include breakpoint(tablet) {
+      padding: 30px 0px 30px;
+    }
+    @include breakpoint(mobile-big) {
+      padding: 20px 0px 20px;
+    }
+  }
+
+  &__info {
+    color: $color-white;
+    margin-bottom: 60px;
+    @include breakpoint(laptop) {
+      margin-bottom: 40px;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $color-orange;
+    margin-right: 10px;
+    @include breakpoint(laptop) {
+      margin-right: 15px;
+    }
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+    @include breakpoint(mobile-big) {
+      @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+    }
+  }
+
+  &__subtitle {
+    @include breakpoint(laptop) {
+      padding-right: 160px;
+    }
+    &_orange {
+      color: $color-orange;
+      @include breakpoint(mobile-big) {
+        @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+        padding-right: 0;
+      }
+    }
+    &_small {
+      @include breakpoint(tablet) {
+        padding-right: 0;
+        @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+      }
+    }
+  }
+
+  &__text {
+    &_reopen {
+      margin: 7px 0 46px;
+      @include breakpoint(laptop) {
+        margin: 29px 0 46px;
+      }
+      @include breakpoint(tablet) {
+        margin: 20px 0 27px;
+      }
+      @include breakpoint(mobile-big) {
+        margin: 18px 0 27px;
+      }
+    }
+    &_joy {
+      margin: 20px 0 60px;
+      @include breakpoint(laptop) {
+        margin: 11px 0 60px;
+      }
+      @include breakpoint(tablet) {
+        margin: 22px 0 50px;
+        text-align: center;
+      }
+      @include breakpoint(mobile-big) {
+        @include font($size: 1.6rem, $height: 2.24rem, $weight: 400);
+        margin: 10px 0 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 48px;
+
+    @include breakpoint(tablet) {
+      margin-top: 40px;
+    }
+    @include breakpoint(mobile-big) {
+      margin-top: 3px;
+    }
+  }
+}
+
+.money-form {
+  &__number {
+    margin: 50px 0 24px;
+
+    @include breakpoint(laptop) {
+      margin: 50px 0 25px;
+    }
+    @include breakpoint(tablet) {
+      margin: 50px 0 31px;
+    }
+    @include breakpoint(mobile-big) {
+      margin: 25px 0 24px;
+    }
+  }
+
+  &__radio {
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    gap: 50px;
+    @include breakpoint(tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  &__button {
+    margin: 28px 0 29px 9px;
+    text-align: center;
+
+    @include breakpoint(mobile-big) {
+      margin: 24px 0 29px 0;
+    }
+  }
+  &__text {
+    margin-left: 4px;
+    text-align: center;
+
+    @include breakpoint(mobile-big) {
+      margin-left: -1px;
+    }
+  }
+}
+
+.panda-diet {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 13px;
+
+  @include breakpoint(laptop) {
+    margin-right: 15px;
+  }
+
+  @include breakpoint(tablet) {
+    gap: 40px;
+  }
+  @include breakpoint(mobile-big) {
+    margin-right: 0;
+    gap: 37px;
+  }
+
+  &__text {
+    @include breakpoint(mobile-big) {
+      @include font($size: 0.902rem, $height: 2.24rem, $weight: 400);
+    }
+  }
+
+  &__left {
+    position: relative;
+    margin: 0 90px 49px 0;
+    &::after {
+      content: '';
+      position: absolute;
+      background: url(../assets/icons/x_icon.svg);
+      width: 14px;
+      height: 14px;
+      left: 170px;
+      bottom: 50px;
+
+      @include breakpoint(mobile-big) {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      margin: 0 50px 51px 0;
+    }
+    @include breakpoint(mobile-big) {
+      margin: 0 12px 23px 0;
+    }
+  }
+
+  &__4-num {
+    font-weight: 500;
+    font-size: 7.2rem;
+    line-height: 110%;
+    text-align: center;
+    color: $color-black;
+
+    @include breakpoint(mobile-big) {
+      @include font($size: 4.3rem, $height: 90%, $weight: 500);
+    }
+  }
+  &__right {
+    padding: 0 0 0 0;
+  }
+  &__mini-panda {
+    background: url(../assets/icons/mini-panda.svg);
+    width: 284px;
+    height: 246px;
+    background-repeat: no-repeat;
+
+    @include breakpoint(mobile-big) {
+      background-size: 100%;
+      width: 160px;
+      height: 139px;
+    }
+  }
+}
+
+.progress-bar {
+  @include breakpoint(laptop) {
+    max-width: 810px;
+    margin: auto;
+  }
+  @include breakpoint(tablet-big) {
+    width: 600px;
+  }
+  @include breakpoint(mobile-big) {
+    width: 300px;
+  }
+  &__title {
+    margin: 0 0 20px 5px;
+    @include breakpoint(laptop) {
+      margin: 0 0 17px 0;
+    }
+    @include breakpoint(tablet) {
+      margin: 0 0 7px 10px;
+    }
+    @include breakpoint(mobile-big) {
+      margin: 0 0 8px 0px;
+    }
+  }
+
+  &__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 27px;
+    border-radius: 2px;
+    background-color: $color-progress_bar;
+
+    @include breakpoint(mobile-big) {
+      height: 13.5px;
+      border-radius: 1px;
+    }
+  }
+
+  &__line {
+    width: 93%;
+    height: 2px;
+    background-color: $color-progres_bar_line;
+
+    @include breakpoint(laptop) {
+      width: 95%;
+    }
+    @include breakpoint(tablet-big) {
+      width: 86%;
+    }
+  }
+
+  &__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(laptop) {
+      width: 845px;
+    }
+    @include breakpoint(tablet-big) {
+      width: 584px;
+      margin-left: 16px;
+    }
+    @include breakpoint(mobile-big) {
+      width: 290px;
+      margin-left: 1px;
+    }
+  }
+
+  &__radio {
+    display: none;
+    &:checked + label {
+      color: $color-orange;
+    }
+    &:checked + label::after {
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    @include font($size: 2.6rem, $height: 3.64rem, $weight: 500);
+    cursor: pointer;
+    position: relative;
+    width: 67px;
+    padding-top: 11px;
+    transition: $main-transition;
+    @include breakpoint(mobile-big) {
+      @include font($size: 1.3rem, $height: 1.82rem, $weight: 500);
+      padding-top: 7px;
+      padding-left: 7px;
+      width: 32px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      transition: $main-transition;
+      width: 10px;
+      height: 10px;
+      left: 26px;
+      bottom: 57px;
+      background: $color-yellow;
+      border-radius: 50%;
+
+      @include breakpoint(laptop) {
+        left: 12px;
+      }
+      @include breakpoint(tablet-big) {
+        left: 20px;
+      }
+      @include breakpoint(mobile-big) {
+        width: 5px;
+        height: 5px;
+        left: 16px;
+        bottom: 29px;
+      }
+    }
+    &::after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      transition: $main-transition;
+      width: 40px;
+      height: 40px;
+      left: 11px;
+      bottom: 42px;
+      background: url(../assets/icons/roller_icon.svg);
+
+      @include breakpoint(laptop) {
+        left: -2px;
+      }
+      @include breakpoint(tablet-big) {
+        left: 5px;
+      }
+      @include breakpoint(mobile-big) {
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        left: 9px;
+        bottom: 21px;
+      }
+    }
+    &:hover {
+      color: $color-orange;
+      &::before {
+        background: $color-orange;
+      }
+    }
+
+    &_hide-laptop {
+      @include breakpoint(laptop) {
+        display: none;
+      }
+    }
+    &_hide-tablet {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes border-anim {
+  from {
+    border: 1px solid $color-grey_amount;
+  }
+  50% {
+    border: 3px solid $color-orange;
+  }
+  to {
+    border: 1px solid $color-grey_amount;
+  }
+}
+
+.change-border {
+  animation: border-anim 0.3s ease-in forwards;
+}
+
+.input-number {
+  margin: auto;
+  padding-left: 9px;
+  display: flex;
+  width: 268px;
+  height: 54px;
+  background: url(../assets/icons/Dollar.svg);
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  border: 1px solid $color-grey_amount;
+  border-radius: 2px;
+  &:focus {
+    background: url(../assets/icons/dollar_green.svg);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    border: 1px solid $color-green;
+    color: $color-green;
+    outline: $color-green;
+  }
+
+  @include breakpoint(tablet) {
+    width: 180px;
+    height: 42px;
+    padding-left: 5px;
+  }
+}
+
+.radio-item {
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 1px solid #fe9013;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: #4b9200;
+      border: 1px solid #4b9200;
+      border-radius: 50%;
+      opacity: 0;
+    }
+  }
+
+  &__input:checked + &__label::after {
+    opacity: 1;
+  }
+}

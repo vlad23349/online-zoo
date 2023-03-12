@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  color: $color-white;
+  background-color: $color-black;
+  padding: 14px 0;
+  z-index: 4;
+
+  @include breakpoint(tablet-big) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(tablet-big) {
+      padding: 0 20px;
+    }
+    @include breakpoint(mobile-big) {
+      padding: 0 11px;
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

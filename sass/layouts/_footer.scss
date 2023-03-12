@@ -1,0 +1,223 @@
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+
+  &__wrapper {
+    position: relative;
+    padding: 40px 30px 50px;
+    @include breakpoint(tablet-big) {
+      padding: 12px 30px 12px;
+    }
+    @include breakpoint(tablet) {
+      padding: 12px 20px 12px;
+    }
+    @include breakpoint(mobile-big) {
+      padding: 6px 10px 21px;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 37px;
+    @include breakpoint(tablet) {
+      margin-bottom: 33px;
+    }
+    @include breakpoint(mobile-big) {
+      justify-content: center;
+      margin-bottom: 70px;
+    }
+  }
+  &__navigation {
+    display: flex;
+    margin-right: 5px;
+    @include breakpoint(laptop-big) {
+      margin-right: 30px;
+    }
+    @include breakpoint(mobile-big) {
+      order: 2;
+      margin: auto;
+    }
+    &_donate {
+      @include breakpoint(laptop) {
+        margin-right: 4px;
+      }
+      @include breakpoint(mobile-big) {
+        margin-right: auto;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+    align-items: flex-end;
+    @include breakpoint(tablet) {
+      margin-top: 68px;
+      flex-wrap: wrap;
+    }
+    @include breakpoint(mobile-big) {
+      margin-top: 32px;
+      justify-content: flex-end;
+      gap: 30px;
+    }
+  }
+  &__button {
+    @include breakpoint(mobile-big) {
+      text-align: center;
+    }
+  }
+}
+
+.subscribe {
+  @include breakpoint(laptop-big) {
+    margin-right: 32px;
+  }
+  @include breakpoint(tablet-big) {
+    display: none;
+  }
+  &__text {
+    color: $color-white;
+    margin-bottom: 14px;
+  }
+  &__email {
+    margin-right: 5px;
+    width: 228px;
+    padding: 11px 7px 11px 7px;
+    border: 1px solid $color-orange;
+    border-radius: 2px;
+    background: transparent;
+    outline: none;
+    color: $color-middle_grey;
+    &:focus {
+      color: $color-green;
+      border: 1px solid $color-green;
+      &:invalid {
+        color: #d31414;
+        border: 1px solid #d31414;
+      }
+    }
+    &:focus + .subscribe__submit {
+      color: $color-green;
+      border: 1px solid $color-green;
+    }
+    &:focus:invalid + .subscribe__submit {
+      color: #d31414;
+      border: 1px solid #d31414;
+    }
+    &::placeholder {
+      color: $color-middle_grey;
+    }
+  }
+  &__submit {
+    padding: 11px 39px 11px 39px;
+    color: $color-black;
+    background: #f1f3f2;
+    border: 1px solid #333b41;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $main-transition;
+    &:active {
+      color: $color-green;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  margin-right: 123px;
+  gap: 10px;
+  @include breakpoint(tablet-big) {
+    position: absolute;
+    top: 12px;
+    margin: 0;
+    right: 19px;
+    gap: 20px;
+  }
+  @include breakpoint(mobile-big) {
+    flex-direction: row;
+    position: absolute;
+    top: 72px;
+    margin: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+    gap: 30px;
+  }
+  &__block {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover .social__ico {
+      background-color: $color-green;
+    }
+  }
+  &__text {
+    padding: 3px 0 0 12px;
+    transition: $main-transition;
+    &:hover {
+      color: $color-green;
+    }
+    @include breakpoint(tablet-big) {
+      display: none;
+    }
+  }
+  &__ico {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: $main-transition;
+    &_facebk {
+      background: url(../assets/icons/Facebook.svg) $color-black_blue;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &_twit {
+      background: url(../assets/icons/Twitter.svg) $color-black_blue;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &_inst {
+      background: url(../assets/icons/Instagram.svg) $color-black_blue;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &_youtb {
+      background: url(../assets/icons/Youtube.svg) $color-black_blue;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &:hover {
+      background-color: $color-green;
+    }
+    &:hover + .social__text {
+      color: $color-green;
+    }
+  }
+}
+
+.design {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    cursor: pointer;
+    font-weight: 100;
+    color: $color-middle_grey;
+    transition: $main-transition;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+    &:hover {
+      color: $color-green;
+      text-decoration: underline;
+    }
+    @include breakpoint(mobile-big) {
+      @include font($size: 1.5rem, $height: 1.8rem, $weight: 100);
+    }
+  }
+}

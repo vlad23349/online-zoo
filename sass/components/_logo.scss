@@ -1,0 +1,71 @@
+.header__logo {
+  margin-right: 63px;
+}
+
+.logo__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 82px;
+  height: 52px;
+  border: 1px solid $color-white;
+  border-radius: 2px;
+  background: url(../assets/icons/bamboo.svg);
+  background-repeat: no-repeat;
+  background-position: 11px 24px;
+  transition: $main-transition;
+
+  &_orange {
+    color: $color-orange;
+    border: 1px solid $color-orange;
+    background: url(../assets/icons/bamboo_orange.svg);
+    background-repeat: no-repeat;
+    background-position: 11px 24px;
+  }
+
+  &:hover {
+    border: 1px solid $color-orange_hover;
+    color: $color-orange_hover;
+  }
+  &:active {
+    border: 1px solid $color-green;
+    color: $color-green;
+  }
+
+  &_small {
+    @include breakpoint(tablet-big) {
+      border: none;
+      background-position: 3px 15px;
+      background-size: 7px 16px;
+      width: 47px;
+      height: 34px;
+    }
+  }
+  &_footer-mobile {
+    @include breakpoint(mobile-big) {
+      border: none;
+      width: 100%;
+      background-position: 73px 12px;
+    }
+  }
+}
+
+.logo__text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.9rem;
+
+  &_small {
+    @include breakpoint(tablet-big) {
+      font-size: 1.23rem;
+      line-height: 1.475rem;
+    }
+  }
+  &_footer-mobile {
+    @include breakpoint(mobile-big) {
+      font-size: 1.901rem;
+      line-height: 2.282rem;
+    }
+  }
+}

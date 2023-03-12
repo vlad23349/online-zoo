@@ -1,0 +1,56 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-block {
+  display: none;
+  animation: $card-transition;
+}
+
+.show {
+  display: flex;
+}
+
+.next {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -103%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 103%;
+  }
+}

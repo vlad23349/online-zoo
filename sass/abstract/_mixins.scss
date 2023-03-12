@@ -1,0 +1,24 @@
+// font
+@mixin font($size, $height: 2.24rem, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+// Breakpoints
+$breakpoints: (
+  'desktop': '1599px',
+  'laptop-big': '1449px',
+  'laptop': '1159px',
+  'tablet-big': '999px',
+  'tablet': '759px',
+  'mobile-big': '637px',
+  'mobile': '413px',
+  'mobile-small': '319px',
+);
+
+@mixin breakpoint($size) {
+  @media (max-width: map-get($breakpoints,$size)) {
+    @content;
+  }
+}

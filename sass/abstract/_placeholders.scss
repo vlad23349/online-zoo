@@ -1,0 +1,16 @@
+%pseudo {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+%font-main {
+  font-family: 'Roboto', sans-serif;
+}
+
+%testimonials-icon {
+  height: 37px;
+  width: 37px;
+  background-size: cover;
+}

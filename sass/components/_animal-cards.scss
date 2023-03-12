@@ -1,0 +1,263 @@
+.animals {
+  position: relative;
+  padding: 0 0 100px;
+  overflow: hidden;
+
+  @include breakpoint(laptop) {
+    padding: 0 0 141px;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 0 0 101px;
+  }
+
+  @include breakpoint(mobile-big) {
+    padding: 0 0 60px;
+  }
+
+  &__button {
+    text-align: center;
+    margin-top: 80px;
+    @include breakpoint(tablet) {
+      margin-top: 60px;
+    }
+    @include breakpoint(mobile-big) {
+      margin-top: 20px;
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint(tablet-big) {
+      max-width: 660px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: url(../assets/images/palm_foto.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 880px;
+    height: 460px;
+    bottom: 0;
+    left: -588px;
+    @include breakpoint(desktop) {
+      width: 386px;
+      height: 202px;
+      left: -193px;
+    }
+    @include breakpoint(tablet) {
+      left: -251px;
+    }
+    @include breakpoint(mobile-big) {
+      width: 138px;
+      height: 72px;
+      left: -80px;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: url(../assets/images/strelitzia.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 368px;
+    height: 275px;
+    bottom: 0;
+    right: 0;
+    @include breakpoint(desktop) {
+      width: 241px;
+      height: 180px;
+    }
+    @include breakpoint(tablet) {
+      width: 175px;
+      height: 131px;
+    }
+    @include breakpoint(mobile-big) {
+      width: 85px;
+      height: 63px;
+      bottom: 0px;
+      right: -17px;
+    }
+  }
+}
+
+.arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+  width: calc(1160px + 162px);
+  left: calc((100% - 1160px - 164px) / 2);
+  top: calc(50% - 149px);
+  @include breakpoint(desktop) {
+    width: 295px;
+    left: calc((100% - 295px) / 2);
+  }
+  @include breakpoint(laptop) {
+    top: calc(50% - 170px);
+  }
+  @include breakpoint(tablet) {
+    width: 154px;
+    left: calc((100% - 154px) / 2);
+    top: calc(50% - 141px);
+  }
+  @include breakpoint(mobile-big) {
+    display: none;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  padding: 19px 22px;
+  background: $color-orange;
+  border-radius: 50%;
+  transition: $main-transition;
+  &:hover {
+    background: $color-button_hover;
+  }
+
+  &:active {
+    background: $color-green;
+  }
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  @include breakpoint(desktop) {
+    row-gap: 92px;
+  }
+  @include breakpoint(mobile-big) {
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  border: 1px solid $color-orange2;
+  border-radius: 5px;
+  width: fit-content;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    width: 285px;
+    height: 332px;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 366px;
+    height: 366px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    border-style: none;
+    transition: $card-transition;
+    @include breakpoint(laptop) {
+      width: 294px;
+      height: 294px;
+    }
+    @include breakpoint(tablet) {
+      height: 285px;
+    }
+  }
+
+  &__content {
+    padding: 0 9px 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+      padding: 0 0px 12px 13px;
+    }
+  }
+
+  &__info {
+    width: fit-content;
+    transition: $card-transition;
+  }
+
+  &__title {
+    @include breakpoint(tablet) {
+      @include font($size: 1.247rem, $height: 1.746rem, $weight: 500);
+    }
+  }
+
+  &__text {
+    @include breakpoint(tablet) {
+      @include font($size: 1.17rem, $height: 1.403rem, $weight: 300);
+    }
+  }
+
+  &__icon {
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 37px;
+  }
+
+  &__icon_meat {
+    width: 48px;
+    background: url(../assets/icons/meet-fish_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    @include breakpoint(tablet) {
+      margin-top: -3px;
+      background-size: 37px 29px;
+    }
+  }
+
+  &__icon_veg {
+    margin-top: 3px;
+    margin-right: -4px;
+    background: url(../assets/icons/banana-bamboo_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    @include breakpoint(tablet) {
+      margin-top: 0;
+      margin-right: -3px;
+      background-size: 26px 29px;
+    }
+  }
+
+  &_hide {
+    @include breakpoint(tablet-big) {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: '';
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $color-background_card;
+    opacity: 0;
+    transition: $card-transition;
+    z-index: 2;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:hover &__img {
+    transform: scale(1.03);
+  }
+
+  &:hover &__info {
+    font-size: 3rem;
+    z-index: 3;
+    transform: translateY(-170px) scale(1.15);
+    color: white;
+    margin-left: 10px;
+  }
+}

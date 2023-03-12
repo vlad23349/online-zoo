@@ -1,0 +1,49 @@
+.header__navigation {
+  @include breakpoint(tablet-big) {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  &__element {
+    list-style: none;
+    margin-right: 58px;
+    @include breakpoint(laptop-big) {
+      margin-right: 48px;
+    }
+    @include breakpoint(tablet) {
+      margin-right: 37px;
+    }
+    @include breakpoint(mobile-big) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    transition: $main-transition;
+    &:hover {
+      color: $color-orange;
+    }
+    &_black {
+      color: $color-black;
+    }
+    &_active {
+      color: $color-orange;
+    }
+  }
+}
+
+.copyright {
+  &__link {
+    transition: 0.2s ease-in;
+    &_black {
+      color: $color-black;
+    }
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}

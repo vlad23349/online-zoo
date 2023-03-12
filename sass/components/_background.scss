@@ -1,0 +1,19 @@
+.background {
+  min-height: 387px;
+  background: url(../../assets/images/panda-donate.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include breakpoint(laptop) {
+    min-height: 390px;
+    background-position: -173px;
+  }
+  @include breakpoint(tablet) {
+    min-height: 335px;
+    background-position: -272px;
+  }
+  @include breakpoint(mobile-big) {
+    min-height: 187px;
+    background-position: -148px;
+  }
+}

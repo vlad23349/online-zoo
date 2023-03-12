@@ -1,0 +1,103 @@
+.backstage {
+  padding: 140px 0 175px;
+  position: relative;
+  overflow: hidden;
+  @include breakpoint(laptop) {
+    padding: 100px 0 143px;
+  }
+  @include breakpoint(tablet) {
+    padding: 53px 0 78px;
+  }
+  @include breakpoint(mobile-big) {
+    padding: 105px 0 37px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 609px 1fr;
+    column-gap: 87px;
+    @include breakpoint(laptop-big) {
+      column-gap: 32px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include breakpoint(tablet) {
+      margin-left: 4px;
+      margin-bottom: 22px;
+    }
+    @include breakpoint(mobile) {
+      margin-left: 0;
+      margin-bottom: 9px;
+      @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+    }
+  }
+
+  &__subtitle {
+    margin: 54px 0 34px;
+    @include breakpoint(tablet) {
+      margin: 31px 0 18px 4px;
+    }
+    @include breakpoint(mobile-big) {
+      margin: 22px 0 9px;
+    }
+  }
+
+  &__text:first-of-type {
+    line-height: 2.08rem;
+  }
+
+  &__info {
+    @include breakpoint(tablet-big) {
+      grid-column: 1 / -1;
+      max-width: 82%;
+    }
+    @include breakpoint(mobile-big) {
+      max-width: 100%;
+    }
+  }
+
+  &__cap-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include breakpoint(laptop) {
+      max-height: 408px;
+      margin-top: 9px;
+    }
+    @include breakpoint(tablet-big) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @extend %pseudo;
+    background: url(../../assets/images/flower_foto.png);
+    width: 204px;
+    height: 613px;
+    right: 0;
+    bottom: 97px;
+    @include breakpoint(desktop) {
+      transform: translateX(100px);
+    }
+    @include breakpoint(laptop-big) {
+      display: none;
+    }
+    @include breakpoint(tablet-big) {
+      display: block;
+      width: 231px;
+      height: 476px;
+      background-size: contain;
+      top: -10px;
+      right: -103px;
+      transform: translateX(0);
+    }
+    @include breakpoint(mobile-big) {
+      width: 105px;
+      height: 217px;
+      top: 39px;
+      right: -73px;
+    }
+  }
+}

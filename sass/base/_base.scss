@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-main;
+  @include font($size: 1.6rem, $weight: 400);
+  overflow-x: hidden;
+  font-style: normal;
+  color: $color-black_blue;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+  &.button {
+    padding: 15px;
+    text-align: center;
+  }
+}

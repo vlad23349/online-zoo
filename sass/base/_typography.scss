@@ -1,0 +1,33 @@
+.title {
+  @include font($size: 4.8rem, $height: 5.76rem);
+}
+
+.subtitle {
+  @include font($size: 3.6rem, $height: 4.68rem);
+}
+
+.big-400 {
+  @include font($size: 2.4rem, $height: 2.88rem);
+}
+
+.big-500 {
+  @include font($size: 2.4rem, $height: 2.88rem, $weight: 500);
+}
+
+.reg-500 {
+  @include font($size: 1.6rem, $height: 2.24rem, $weight: 500);
+  &_short {
+    line-height: 2.08rem;
+  }
+}
+
+.reg-400 {
+  @include font($size: 1.6rem, $height: 2.24rem);
+  &_short {
+    line-height: 2.08rem;
+  }
+}
+
+.small-300 {
+  @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+}

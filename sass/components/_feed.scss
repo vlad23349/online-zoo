@@ -1,0 +1,281 @@
+.feed {
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  opacity: 0.9;
+  padding: 69px 0 100px;
+
+  @include breakpoint(laptop) {
+    padding: 30px 0 50px;
+  }
+  @include breakpoint(tablet) {
+    padding: 20px 0 20px;
+  }
+
+  &__wrapper {
+    @include breakpoint(laptop) {
+      max-width: 1000px;
+    }
+    @include breakpoint(tablet) {
+      max-width: 1000px;
+      background: rgba(253, 253, 255, 0.52);
+      border-radius: 20px;
+    }
+  }
+
+  &__container {
+    padding: 41px 99px 59px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    @include breakpoint(laptop-big) {
+      padding: 30px 48px 50px 49px;
+    }
+    @include breakpoint(tablet) {
+      padding: 0;
+      background: none;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $color-orange;
+    margin-bottom: 30px;
+    @include breakpoint(laptop) {
+      margin-bottom: 21px;
+    }
+    @include breakpoint(tablet) {
+      padding-top: 9px;
+      @include font($size: 4.2rem, $height: 5.04rem, $weight: 400);
+    }
+    @include breakpoint(mobile-big) {
+      padding-top: 20px;
+      margin-bottom: 10px;
+      @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    @include breakpoint(tablet) {
+      margin-bottom: 22px;
+    }
+    @include breakpoint(mobile-big) {
+      @include font($size: 2.4rem, $height: 2.88rem, $weight: 400);
+    }
+  }
+
+  &__text {
+    text-align: start;
+    &.big-400 {
+      margin-bottom: 40px;
+      @include breakpoint(laptop) {
+        margin-bottom: 20px;
+      }
+      @include breakpoint(tablet) {
+        @include font($size: 2.2rem, $height: 2.64rem, $weight: 400);
+      }
+      @include breakpoint(mobile-big) {
+        text-align: center;
+        @include font($size: 1.8rem, $height: 2.16rem, $weight: 400);
+      }
+    }
+    &.reg-500 {
+      white-space: nowrap;
+      margin-bottom: 12px;
+      @include breakpoint(laptop-big) {
+        white-space: normal;
+        margin: 0 30px 10px 0;
+      }
+      @include breakpoint(tablet) {
+        margin: 0 0 10px 0;
+      }
+      @include breakpoint(mobile-big) {
+        display: none;
+      }
+    }
+    &.reg-400 {
+      margin-bottom: 60px;
+      max-width: 863px;
+      @include breakpoint(laptop) {
+        margin-bottom: 40px;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 30px;
+      }
+      @include breakpoint(mobile-big) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-black_blue;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #febdab;
+  }
+
+  &__how-works {
+    padding: 0 99px;
+    @include breakpoint(laptop) {
+      padding: 0 40px;
+    }
+    @include breakpoint(tablet-big) {
+      padding: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 62px;
+    text-align: center;
+    @include breakpoint(laptop) {
+      margin-top: 72px;
+    }
+    @include breakpoint(tablet) {
+      padding-bottom: 61px;
+      margin-top: 40px;
+    }
+    @include breakpoint(mobile-big) {
+      padding-bottom: 39px;
+      margin-top: 38px;
+    }
+  }
+}
+
+.how-works {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 130px;
+
+  @include breakpoint(tablet-big) {
+    gap: 43px;
+    margin: 0 12px 39px 0;
+  }
+
+  @include breakpoint(mobile-big) {
+    margin: 0;
+    gap: 21px;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__block {
+    width: 167px;
+    position: relative;
+    @include breakpoint(mobile-big) {
+      &:last-child {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  &__text {
+    min-height: 45px;
+  }
+
+  &__ico {
+    height: 167px;
+    border: 1px solid $color-orange;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+    @include breakpoint(mobile-big) {
+      margin-bottom: 10px;
+    }
+
+    &_pay {
+      background: url(../assets/icons/pay.svg);
+      background-color: $color-white;
+      background-repeat: no-repeat;
+      background-position: center;
+      &::after {
+        content: '';
+        position: absolute;
+        background: url(../assets/icons/Vector.svg);
+        width: 71px;
+        height: 37px;
+        left: 197px;
+        top: 60px;
+        @include breakpoint(tablet-big) {
+          background: url(/assets/icons/green-arrow.png);
+          background-repeat: no-repeat;
+          width: 89px;
+          height: 29px;
+          left: 150px;
+          top: -15px;
+          z-index: 1;
+        }
+        @include breakpoint(tablet) {
+          left: 137px;
+          top: -17px;
+        }
+        @include breakpoint(mobile-big) {
+          left: 140px;
+          top: 192px;
+          transform: rotate(85deg);
+        }
+      }
+    }
+
+    &_zoo {
+      background: url(../assets/icons/zoo.svg);
+      background-color: $color-white;
+      background-repeat: no-repeat;
+      background-position: center;
+      &::after {
+        content: '';
+        position: absolute;
+        background: url(../assets/icons/Vector.svg);
+        width: 71px;
+        height: 37px;
+        left: 197px;
+        top: 60px;
+        @include breakpoint(tablet-big) {
+          background: url(/assets/icons/green-arrow.png);
+          background-repeat: no-repeat;
+          width: 89px;
+          height: 29px;
+          left: 150px;
+          top: -15px;
+          z-index: 1;
+        }
+        @include breakpoint(tablet) {
+          left: 135px;
+          top: -18px;
+        }
+        @include breakpoint(mobile-big) {
+          left: 139px;
+          top: 198px;
+          transform: rotate(85deg);
+        }
+      }
+    }
+
+    &_monkey {
+      background: url(../assets/icons/monkey.svg);
+      background-color: $color-white;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+//colors
+$color-orange: #f9804b;
+$color-orange2: #fa6f32;
+$color-orange_hover: #e47209;
+$color-white: #fff;
+$color-black: #000;
+$color-black_blue: #333b41;
+$color-progress_bar: #404950;
+$color-progres_bar_line: #72828e;
+$color-yellow: #ffee2e;
+$color-red: #d31414;
+$color-green: #4b9200;
+$color-grey: #767474;
+$color-grey_smoky: #ababab;
+$color-light_grey: #f1f3f2;
+$color-middle_grey: #bdbdbd;
+$color-grey_amount: #929699;
+$color-frosted_glass_white: #fdfdff;
+$color-button_hover: #e47209;
+$color-background_card: rgba(0, 0, 0, 0.45);
+$color-background: linear-gradient(
+    315.75deg,
+    rgba(254, 210, 144, 0.7) 30.06%,
+    #febdab 100.95%,
+    rgba(254, 210, 144, 0.7) 106.36%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  );
+
+//transition
+$main-transition: 0.2s ease-in;
+$card-transition: 1s ease-in-out;
+
+$content-width: 1160px;

@@ -1,0 +1,103 @@
+.favorite-animal {
+  background: url(../assets/images/Giant\ Panda.png) no-repeat center;
+  padding: 86px 0 100px;
+  background-position: center -80px;
+  background-size: 100%;
+
+  @include breakpoint(laptop-big) {
+    background-size: 120%;
+    padding: 42.8px 0 47px;
+  }
+
+  @include breakpoint(tablet) {
+    background-position: center -35px;
+  }
+
+  @include breakpoint(mobile-big) {
+    background-position: center 0;
+    padding: 42.8px 0 40px;
+  }
+
+  &__promo {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__button {
+    margin: 60px 97px 0 0;
+    display: flex;
+    justify-content: end;
+    @include breakpoint(laptop-big) {
+      margin: 41px 105px 0 0;
+    }
+    @include breakpoint(tablet-big) {
+      margin: -8px 0 0 2px;
+      display: flex;
+      justify-content: start;
+    }
+    @include breakpoint(mobile-big) {
+      position: absolute;
+      margin: 60px 0 0 0;
+    }
+  }
+}
+
+.promo {
+  &__title {
+    @include font($size: 10.65rem, $height: 8rem, $weight: 700);
+    position: relative;
+    z-index: 1;
+    color: $color-white;
+    margin-right: 8px;
+    text-align: center;
+    @include breakpoint(laptop-big) {
+      @include font($size: 8.5rem, $height: 6.375rem, $weight: 700);
+      margin-right: 64px;
+    }
+    @include breakpoint(tablet-big) {
+      @include font($size: 5.44rem, $height: 4.081rem, $weight: 700);
+      width: 256px;
+      margin: 5px -4px 0 0;
+    }
+    @include breakpoint(mobile-big) {
+      @include font($size: 2.8rem, $height: 2.1rem, $weight: 700);
+      width: fit-content;
+      margin: -1px 0 0 0;
+    }
+
+    &:before {
+      @extend %pseudo;
+      width: 465px;
+      height: 465px;
+      z-index: -1;
+      left: -82px;
+      bottom: 9px;
+      border-radius: 50%;
+      background: $color-orange;
+      @include breakpoint(laptop-big) {
+        height: 367px;
+        width: 367px;
+        left: -66px;
+        bottom: 6px;
+      }
+      @include breakpoint(tablet-big) {
+        height: 237.6px;
+        width: 237.6px;
+        left: -38px;
+        bottom: 4px;
+      }
+      @include breakpoint(mobile-big) {
+        height: 119px;
+        width: 119px;
+        left: -19px;
+        bottom: 6px;
+      }
+    }
+  }
+
+  &__text {
+    &_yellow {
+      color: $color-yellow;
+    }
+  }
+}
